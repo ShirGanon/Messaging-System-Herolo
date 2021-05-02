@@ -28,7 +28,7 @@ router.get("/:user", (req, res) => {
     console.log(query);
     Message.find(query)
       .then((docs) => {
-        res.send(docs.length);
+        res.send(docs);
       })
       .catch((err) => {
         res.status(400).send(err.message);
